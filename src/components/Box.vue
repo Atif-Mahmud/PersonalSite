@@ -36,8 +36,8 @@ export default class Box extends Vue {
 .contents-enter {
   transform: translateY(10px);
   opacity: 0;
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+  /*filter: blur(10px);*/
+  /*-webkit-filter: blur(10px);*/
 }
 
 @keyframes special {

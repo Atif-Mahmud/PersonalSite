@@ -58,7 +58,7 @@ export default class Sampler extends Vue {
       .attr('width', this.width)
       .attr('height', this.height);
 
-    this.redraw();
+    this.$nextTick(this.redraw);
   }
 
   redraw() {

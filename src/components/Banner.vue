@@ -3,7 +3,7 @@
     <Box v-bind:reveal="show1" @entered="() => show2 = true">
       <h2 class="text-xl">
         Reload for a New
-        <span class="font-bold underline">Poisson Disc Distribution</span>
+        <a href="https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf" class="font-bold underline">Poisson Disc Distribution</a>
       </h2>
     </Box>
     <Box v-bind:reveal="true" @entered="() => show = true">
