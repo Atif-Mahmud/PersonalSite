@@ -4,15 +4,18 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "build": "vue-cli-service build --mode development"
   },
   "dependencies": {
     "core-js": "^2.6.5",
+    "d3": "^5.12.0",
+    "lens-filter-grayscale": "^0.0.8",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.1.0"
   },
   "devDependencies": {
+    "@types/d3": "^5.7.2",
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-typescript": "^3.11.0",
     "@vue/cli-service": "^3.11.0",
