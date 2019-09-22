@@ -9,6 +9,7 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 import * as d3 from 'd3';
 
 import { rgbToHex, poissonDiscSampler } from './PoissonDiscSampler';
+//import grayscale from 'lens-filter-grayscale';
 
 @Component
 export default class Sampler extends Vue {
@@ -100,17 +101,18 @@ export default class Sampler extends Vue {
         */
 
         const R = this.ctx.getImageData(s[0], s[1], 1, 1).data[0];
-        //const G = this.ctx.getImageData(s[0], s[1], 1, 1).data[0];
-        //const B = this.ctx.getImageData(s[0], s[1], 1, 1).data[0];
+        const G = this.ctx.getImageData(s[0], s[1], 1, 1).data[1];
+        const B = this.ctx.getImageData(s[0], s[1], 1, 1).data[2];
+        const A = this.ctx.getImageData(s[0], s[1], 1, 1).data[3];
 
         this.svg
           .append('circle')
           .attr('cx', s[0])
           .attr('cy', s[1])
           .attr('r', 1e-6)
-          .attr('fill', rgbToHex(R, R, R))
           .transition()
-          .attr('r', (1 - R / 255) * 9);
+          .attr('fill', rgbToHex(R, G, B))
+          .attr('r', (1 - (0.2126*R + 0.7152*G + 0.0722*B) / 255) * 9);
       }
     });
   }

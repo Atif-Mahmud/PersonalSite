@@ -1,5 +1,7 @@
 /* eslint-disable */
-import grayscale from 'lens-filter-grayscale';
+//import grayscale from 'lens-filter-grayscale';
+//import sepia from 'lens-filter-sepia';
+//import colorize from 'lens-filter-colorize';
 
 export default
 /**
@@ -59,12 +61,13 @@ async function drawImageProp(url: string, ctx: CanvasRenderingContext2D, x: numb
   // fill image in dest. rectangle
   ctx.drawImage(img, cx, cy, cw, ch, x, y, w, h);
 
+  /*
   const imgPixels = await grayscale({
     data: ctx.getImageData(0, 0, w, h),
+    options: { colorize: 30 }, 
     nWorkers: 4
   });
 
-  /*
     var imgPixels = ctx.getImageData(0, 0, w, h);
 
     for (var y = 0; y < imgPixels.height; y++) {
@@ -78,6 +81,7 @@ async function drawImageProp(url: string, ctx: CanvasRenderingContext2D, x: numb
     }
     */
 
-  ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+  //ctx.putImageData(imgPixels, 0, 0, 0, 0, imgPixels.width, imgPixels.height);
+
   return ctx;
 }

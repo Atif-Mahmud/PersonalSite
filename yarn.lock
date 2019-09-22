@@ -4808,10 +4808,24 @@ lens-core@^0.0.8:
   dependencies:
     workerize "^0.1.7"
 
+lens-filter-colorize@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/lens-filter-colorize/-/lens-filter-colorize-0.0.8.tgz#2a8be7fec46d5fe5269c7de334e8df5f0563bb58"
+  integrity sha512-b0ryffze8aH2zGadU3jbWNBZyrBpStU4Osx3ivC+PasvdUvwzDR/j558XfQVpj2KZn3lV8tQyEks751AMNZP5A==
+  dependencies:
+    lens-core "^0.0.8"
+
 lens-filter-grayscale@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/lens-filter-grayscale/-/lens-filter-grayscale-0.0.8.tgz#5b2562032f0b6255482767c1e8f1e8e7a579b63a"
   integrity sha512-TgsSpbA3CMPkR2UIUvW8qnbdoOXyT31tDK6FUpMYkqaPfqXJHBn7z6KeaoehQUVAjrNwaSHv9V+ONiQoY46SEw==
+  dependencies:
+    lens-core "^0.0.8"
+
+lens-filter-sepia@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/lens-filter-sepia/-/lens-filter-sepia-0.0.8.tgz#d73f6ea35ab26a1dea5003ac43feeed6b4fcae19"
+  integrity sha512-tn9qlgx7JEPHwVe9lNVm2eB9Sef0CtcozYfj+h75xSRuLh8p5f0WtzFyFH2zNtnhAMbiYkL+jKAzuf2b1SEf3g==
   dependencies:
     lens-core "^0.0.8"
 
