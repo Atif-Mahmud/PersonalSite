@@ -9,7 +9,7 @@ export default
  *
  * If image and context are only arguments rectangle will equal canvas
 */
-async function drawImageProp(url: string, ctx: OffscreenCanvasRenderingContext2D, x: number, y: number, w: number, h: number, offsetX: number, offsetY: number) {
+async function drawImageProp(url: string, ctx: CanvasRenderingContext2D, x: number, y: number, w: number, h: number, offsetX: number, offsetY: number) {
   const blob = await fetch(url).then(r => r.blob());
   const img = await createImageBitmap(blob);
 

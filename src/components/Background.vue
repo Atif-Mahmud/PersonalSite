@@ -1,5 +1,5 @@
 <template>
-  <div></div>
+  <canvas id="atif-canvas"></canvas>
 </template>
 
 <script lang="ts">
@@ -12,16 +12,16 @@ export default class Background extends Vue {
 
   wrap!: HTMLDivElement;
 
-  canvas!: OffscreenCanvas;
+  canvas!: HTMLCanvasElement;
 
-  ctx!: OffscreenCanvasRenderingContext2D;
+  ctx!: CanvasRenderingContext2D;
 
   mounted() {
     window.addEventListener("resize", this.handleResize);
-    this.canvas = new OffscreenCanvas(0, 0);
+    this.canvas = document.getElementById('atif-canvas') as HTMLCanvasElement;
     this.ctx = this.canvas.getContext(
       "2d",
-    ) as OffscreenCanvasRenderingContext2D;
+    ) as CanvasRenderingContext2D;
     this.handleResize();
   }
 

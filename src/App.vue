@@ -2,7 +2,7 @@
   <div id="app">
     <Sampler v-bind:ctx="ctx" v-if="ready" ref="sampler" class="absolute overflow-hidden z-0" />
     <Banner v-if="ready" @entered="complete" class="relative overflow-hidden z-10" />
-    <Background v-bind:url="url" @loaded="load" hidden />
+    <Background v-bind:url="urlx" @loaded="load" hidden />
   </div>
 </template>
 
@@ -26,6 +26,8 @@ export default class App extends Vue {
   ready: boolean = false;
 
   start: boolean = false;
+  
+  url!: string;
 
   ctx: any;
 
@@ -49,8 +51,10 @@ export default class App extends Vue {
     this.ctx = e;
   }
 
-  get url() {
-    return this.urls[Math.floor(Math.random()*this.urls.length)];
+  get urlx() {
+    this.url = this.urls[Math.floor(Math.random()*this.urls.length)];
+    console.log(this.url);
+    return  this.url;
   }
 }
 </script>
